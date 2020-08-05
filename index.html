@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>De Fiesta</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body onload="CambioVentana('Inicio');ActualizarCarrito();">
+  <section id="hero">
+    <div class="hero-container">
+     <!-- <a href="index.html" class="hero-logo" ><img src="assets/img/hero-logo.png" alt=""></a>-->
+    </div>
+  </section>
+  <header id="header" class="d-flex align-items-center">
+    <div class="container-fluid" style="text-align: center;" >
+     
+      
+          <a href="#" style="float: left;"><img src="assets/img/logo.png" alt=""  style="width: 2rem;"></a>
+          <a href="index.html" style="float: unset;"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+          
+          
+          <button type="button" class="btn" style="float:right;">
+            <img src="assets/img/Carrito.png" alt="" style="width: 1.5rem;"> 
+            <span class="badge badge-light" Id="TotalCarrito">$ 0</span>
+          </button>
+
+          
+          
+    </div>
+  </header>
+  <main id="main" style="background: #000;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="team" class="team"  style="background: #000; min-height: 50rem;">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg Menu navbar-dark ">
+          <div class=" navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#main" onclick="CambioVentana('Inicio')">
+                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp;Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp; Licores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Wiskys')">Wisky</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Tequilas')">Tequila</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Rones')">Ron</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Vodkas')">Vodka</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Ginebras')">Ginebra</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Aguardientes')">Aguardiente</a>
+                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Cremas')">Crema</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp;Vinos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Reservas</a>
+                  <a class="dropdown-item" href="#">Jovenes</a>
+                  <a class="dropdown-item" href="#">Espumosos</a>
+                </div>
+              </li>
+              
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </div>
+        </nav>
+        
+      </div>
+        <br>
+        <br>
+        <div class="container" id="Inicio">
+          
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/portfolio-details-1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/portfolio-details-2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/portfolio-details-3.jpg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="container" id="Productos">
+          <div class="row" id="rowProductos" style="padding-top: 20px;padding-bottom: 20px;">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+        
+
+        
+      
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sebastian Cristo</span></strong>. Todos los Derechos Reservados
+      </div>
+      <div class="credits">
+       Diseñado Por <a href="https://SebastianCristo.com" target="_blanck">Sebastian Cristo</a>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/Funciones.js"></script>
+
+
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCQzYUs6dfAsM1fScCLwd1yxiqsNDUagAA",
+      authDomain: "defiesta-c89c4.firebaseapp.com",
+      databaseURL: "https://defiesta-c89c4.firebaseio.com",
+      projectId: "defiesta-c89c4",
+      storageBucket: "defiesta-c89c4.appspot.com",
+      messagingSenderId: "94457344129",
+      appId: "1:94457344129:web:c1ef13afeb795817be1d80",
+      measurementId: "G-PDK2D1VM49"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+    var Carrito = getCookie('Carrito');
+
+    function TraerDatos(Categoria){
+      var Task = firebase.database().ref("Productos/"+Categoria+"/");
+      var H=0;document.getElementById("rowProductos").innerHTML='';
+      Task.on("child_added",function(data){
+        
+        var TaskValue=data.val();
+      
+        
+        document.getElementById("rowProductos").innerHTML+=`
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" >
+    <div class="card" >
+        <div class="card-head " style="text-align: center;">
+            <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+        </div>
+        <div class="card-body">
+            <div class="product-desc">
+                <span class="product-title">
+                    <b>${TaskValue.Nombre}</b>     
+                </span>
+            </div>
+            <div class="product-properties">
+                <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                </span>
+                <div class="row">
+                    <div class="col-md-6 col-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id})">-</button>
+                            </div>
+                            <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-${TaskValue.Id}">
+                            <div class="input-group-append">
+                                <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                        <span class="product-price" onclick="Agregar('${Categoria}','${TaskValue.Id}')">
+                          <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-${TaskValue.Id}">
+                            <b>$ ${TaskValue.Valor} Und</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
+              
+
+        
+      });
+    }
+
+  </script>
+  <script>
+    function Agregar(Categoria,Id){
+     
+      
+
+      event.preventDefault();
+    var Cantidad = $("#Cantidad-"+Id).val();
+    var Valor = $("#Valor-"+Id).val();
+    
+    var database = firebase.database();
+    var postData = {
+      Categoria: Categoria,
+      Producto:Id,
+      Cantidad:Cantidad,
+      Valor:Valor
+      
+    };
+    // Get a key for a new Post.
+    var newPostKey = firebase.database().ref().child('Carrito/'+Carrito).push().key;
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var updates = {};
+    updates['/Carrito/'+Carrito+'/' + newPostKey] = postData;  
+  
+    
+     firebase.database().ref().update(updates);
+
+    ActualizarCarrito();
+      
+     
+    }
+
+    function ActualizarCarrito(){
+      var Task = firebase.database().ref("Carrito/"+Carrito+"/");
+      var H=0;
+      Task.on("child_added",function(data){
+    
+        var TaskValue=data.val();
+
+          var Valor=TaskValue.Valor;
+          var Cantidad=TaskValue.Cantidad;
+          var Total =Valor*Cantidad;
+        H =H+Total;
+        
+      
+
+        document.getElementById("TotalCarrito").innerHTML="$ "+H;
+        
+      });
+    }
+
+
+
+    function CambiarCantidad(Operacion,Id){
+      var Cantidad = $('#Cantidad-'+Id).val();
+      Cantidad=Cantidad*1;
+      if(Operacion=="Mas"){
+        Cantidad=Cantidad+1;
+      }else{
+        if(Cantidad>1){
+          Cantidad=Cantidad-1;
+        }
+      }
+      $('#Cantidad-'+Id).val(Cantidad);
+
+    }
+function CambioVentana(Ventana){
+  if(Ventana=='Inicio'){
+    $("#Inicio").show(1000);
+    $("#Productos").hide(1000);
+  }else{
+    $("#Inicio").hide(1000);
+    $("#Productos").show(1000);
+    TraerDatos(Ventana);
+  }
+
+
+  
+
+
+}
+
+
+  </script>
+</body>
+</html>
