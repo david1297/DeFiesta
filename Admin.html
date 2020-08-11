@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>De Fiesta</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link href="assets/img/Logo DeFiesta.png" rel="icon">
+  <link href="assets/img/Logo DeFiesta.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9b6f739949.js" crossorigin="anonymous"></script>
+</head>
+<body >
+  <div id="Loader" style="display: none;">
+    <div class="containerLoader"  >
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+  
+  <header id="header" class="d-flex align-items-center">
+    <div class="container-fluid" style="text-align: center;" >
+          <!--<a href="#" style="float: left;"><img src="assets/img/logo.png" alt=""  style="width: 6rem;"></a>-->
+          <a href="index.html" style="float: unset;"><img src="assets/img/Logo DeFiesta.png" alt="" style="width: 6rem;"></a>
+    </div>
+  </header>
+  <main id="main" style="background: #000;">
+    <section id="team" class="team"  style="background: #000; min-height: 50rem;">
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <label for="Valor">Valor</label>
+            <input type="text" class="form-control" id="Valor" name="Valor" placeholder="Valor">
+          </div>
+          <div class="form-group">
+            <label for="Categoria">Categoria</label>
+            <select class="form-control" id="Categoria">
+              <option value="Wiskys">Licores-Wiskys</option>
+              <option value="Tequilas">Licores-Tequilas</option>
+              <option value="Rones">Licores-Rones</option>
+              <option value="Vodkas">Licores-Vodkas</option>
+              <option value="Aguardientes">Licores-Aguardientes</option>
+              <option value="Cremas">Licores-Cremas</option>
+              <option value="Reservas">Vinos-Reservas</option>
+              <option value="Jovenes">Vinos-Jovenes</option>
+              <option value="Espumosos">Vinos-Espumosos</option>
+              <option value="Importadas">Cervezas-Importadas</option>
+              <option value="Nacionales">Cervezas-Nacionales</option>
+              <option value="Artesanales">Cervezas-Artesanales</option>
+              <option value="Aguas">Bebidas-Aguas</option>
+              <option value="Energizantes">Bebidas-Energizantes</option>
+              <option value="Gaseosas">Bebidas-Gaseosas</option>
+              <option value="Cigarrillos">Otros-Cigarrillos</option>
+              <option value="Hielos">Otros-Hielos</option>
+              <option value="Heets">Otros-Heets</option>
+              <option value="Blond">Otros-Blond</option>
+             
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Descripcion">Descripcion</label>
+            <textarea class="form-control" id="Descripcion" rows="3"></textarea>
+          </div>
+          
+          <div class="input-group ">
+            <div class="custom-file">
+             <input type="file" name="Foto" id="Foto" class="form-control">
+            </div>
+            
+          </div>
+          <br>
+          <input type="button" value="Guardar" class="btn btn-success" onclick="CrearItem();">
+        </form>
+        
+      </div>
+    </section>
+  </main>
+  
+  </div>
+  <footer id="footer">
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Sebastian Cristo</span></strong>. Todos los Derechos Reservados
+      </div>
+      <div class="credits">
+       Diseñado Por <a href="https://SebastianCristo.com" target="_blanck">Sebastian Cristo</a>
+      </div>
+    </div>
+  </footer>
+ 
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/Funciones.js"></script>
+
+
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+  
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCQzYUs6dfAsM1fScCLwd1yxiqsNDUagAA",
+      authDomain: "defiesta-c89c4.firebaseapp.com",
+      databaseURL: "https://defiesta-c89c4.firebaseio.com",
+      projectId: "defiesta-c89c4",
+      storageBucket: "defiesta-c89c4.appspot.com",
+      messagingSenderId: "94457344129",
+      appId: "1:94457344129:web:c1ef13afeb795817be1d80",
+      measurementId: "G-PDK2D1VM49"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var storage = firebase.storage();
+    var database = firebase.database();
+    var storageRef = firebase.storage().ref();
+    var Carrito = getCookie('Carrito');
+    const Modena = { style: 'currency', currency: 'USD' };
+    const Formato = new Intl.NumberFormat('en-US', Modena);
+
+    function CrearItem(){
+    $("#Loader").show(1000);
+
+
+      var file = document.getElementById('Foto').files[0];
+      var Nombre = $('#Nombre').val();
+      var Valor = $('#Valor').val();
+      var Categoria = $('#Categoria').val();
+      var Descripcion = $('#Descripcion').val();
+      if(Nombre==''){
+        
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      var Id=Math.round(Math.random()*(1000-1)+parseInt(1));
+
+
+      var uploadTask = storageRef.child(Categoria+'/'+Id+'.jpg').put(file);
+      uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log('Upload is ' + progress + '% done');
+        switch (snapshot.state) {
+          case firebase.storage.TaskState.PAUSED: // or 'paused'
+            console.log('Upload is paused');
+          break;
+          case firebase.storage.TaskState.RUNNING: // or 'running'
+            console.log('Upload is running');
+          break;
+        }
+      }, function(error) {
+  
+      }, function() {
+        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+          var database = firebase.database();
+
+          firebase.database().ref("Productos/"+Categoria+"/" + Id).set({
+            Nombre: Nombre,
+            Valor: Valor,
+            Descripcion: Descripcion,
+            Id: Id,
+            Foto: downloadURL
+          });
+
+
+          
+
+          console.log('File available at', downloadURL);
+          $("#Loader").hide(1000);
+        });
+      });
+    }
+
+  </script>
+</body>
+</html>

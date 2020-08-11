@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>De Fiesta</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/logo.png" rel="apple-touch-icon">
+  <link href="assets/img/Logo DeFiesta.png" rel="icon">
+  <link href="assets/img/Logo DeFiesta.png" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -16,8 +16,9 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9b6f739949.js" crossorigin="anonymous"></script>
 </head>
-<body onload="CambioVentana('Inicio');ActualizarCarrito();">
+<body onload="VentanaIni();ActualizarCarrito();">
   <section id="hero">
     <div class="hero-container">
      <!-- <a href="index.html" class="hero-logo" ><img src="assets/img/hero-logo.png" alt=""></a>-->
@@ -27,71 +28,99 @@
     <div class="container-fluid" style="text-align: center;" >
      
       
-          <!--<a href="#" style="float: left;"><img src="assets/img/logo.png" alt=""  style="width: 2rem;"></a>-->
+          <!--<a href="#" style="float: left;"><img src="assets/img/logo.png" alt=""  style="width: 6rem;"></a>-->
           <a href="index.html" style="float: unset;"><img src="assets/img/Logo DeFiesta.png" alt="" style="width: 6rem;"></a>
           
-          <!--
-          <button type="button" class="btn" style="float:right;">
-            <img src="assets/img/Carrito.png" alt="" style="width: 1.5rem;"> 
-            <span class="badge badge-light" Id="TotalCarrito">$ 0</span>
-          </button>-->
+         
 
           
           
     </div>
   </header>
   <main id="main" style="background: #000;">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div id="separador">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+   
     <section id="team" class="team"  style="background: #000; min-height: 50rem;">
       <div class="container">
         <nav class="navbar navbar-expand-lg Menu navbar-dark ">
           <div class=" navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#main" onclick="CambioVentana('Inicio')">
-                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp;Inicio<span class="sr-only">(current)</span></a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#main" onclick="CambioVentana('Inicio')">
+                  <img src="assets/img/Menu/1.png" alt=""  style="width: 2rem;">&nbsp;&nbsp;Inicio
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp; Licores
+                  <img src="assets/img/Menu/1.png" alt=""  style="width: 2rem;">&nbsp;&nbsp; Licores
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Wiskys')">Wisky</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Tequilas')">Tequila</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Rones')">Ron</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Vodkas')">Vodka</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Ginebras')">Ginebra</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Aguardientes')">Aguardiente</a>
-                  <a class="dropdown-item" href="#main" onclick="CambioVentana('Cremas')">Crema</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Wiskys')">Wiskys</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Tequilas')">Tequilas</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Rones')">Rones</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Vodkas')">Vodka's</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Aguardientes')">Aguardientes</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Cremas')">Cremas</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="assets/img/CervezaB.png" alt=""  style="width: 1.5rem;">&nbsp;&nbsp;Vinos
+                  <img src="assets/img/Menu/2.png" alt=""  style="width: 2rem;">&nbsp;&nbsp;Vinos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Reservas</a>
-                  <a class="dropdown-item" href="#">Jovenes</a>
-                  <a class="dropdown-item" href="#">Espumosos</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Reservas')">Reservas</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Jovenes')">Jovenes</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Espumosos')">Espumosos</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/Menu/3.png" alt=""  style="width: 2rem;">&nbsp;&nbsp;Cervezas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Importadas')">Importadas</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Nacionales')">Nacionales</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Artesanales')">Artesanales</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/Menu/4.png" alt=""  style="width: 2rem;">&nbsp;&nbsp;Bebidas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Aguas')">Aguas</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Energizantes')">Energizantes</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Gaseosas')">Gaseosas</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/Menu/5.png" alt=""  style="width: 2rem;">&nbsp;&nbsp;Otros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Cigarrillos')">Cigarrillos</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Hielos')">Hielos</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Heets')">Heets</a>
+                  <a class="dropdown-item" href="#" onclick="CambioVentana('Blond')">Blond</a>
                 </div>
               </li>
               
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" id="Buscar" name="Buscar" autocomplete="off" onkeyup="BuscarProducto();">
+             
           </div>
         </nav>
         
       </div>
         <br>
         <br>
-        <div class="container" id="Inicio">
+        <div class="container" id="Inicio" style="display: none;">
           
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -115,7 +144,7 @@
             </a>
           </div>
         </div>
-        <div class="container" id="Productos">
+        <div class="container" id="Productos" style="display: none;">
           <div class="row" id="rowProductos" style="padding-top: 20px;padding-bottom: 20px;">
           
           </div>
@@ -128,6 +157,17 @@
       
     </section>
   </main>
+  <div class="containerShop" id="Carrito">
+    <div class="tabs">
+      <input type="radio" id="radio-1" name="tabs" checked />
+      <label class="tab" for="radio-1" style="
+      margin-bottom: 0px;
+  "><i class="fas fa-shopping-cart"></i><span class="notification" Id="TotalCarrito"></span></label>
+      
+      
+      <span class="glider"></span>
+    </div>
+  </div>
   <footer id="footer">
     <div class="container footer-bottom clearfix">
       <div class="copyright">
@@ -138,7 +178,7 @@
       </div>
     </div>
   </footer>
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+ 
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -161,6 +201,8 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+  
   <script>
     var firebaseConfig = {
       apiKey: "AIzaSyCQzYUs6dfAsM1fScCLwd1yxiqsNDUagAA",
@@ -175,115 +217,1048 @@
     firebase.initializeApp(firebaseConfig);
     var database = firebase.database();
     var Carrito = getCookie('Carrito');
+    const Modena = { style: 'currency', currency: 'USD' };
+    const Formato = new Intl.NumberFormat('en-US', Modena);
 
     function TraerDatos(Categoria){
       var Task = firebase.database().ref("Productos/"+Categoria+"/");
       var H=0;document.getElementById("rowProductos").innerHTML='';
-      Task.on("child_added",function(data){
-        
-        var TaskValue=data.val();
-      
-        
-        document.getElementById("rowProductos").innerHTML+=`
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" >
-    <div class="card" >
-        <div class="card-head " style="text-align: center;">
-            <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
-        </div>
-        <div class="card-body">
-            <div class="product-desc">
-                <span class="product-title">
-                    <b>${TaskValue.Nombre}</b>     
-                </span>
-            </div>
-            <div class="product-properties">
-                <span class="product-color">
-                    <h4>${TaskValue.Descripcion}</h4>     
-                </span>
-                <div class="row">
-                    <div class="col-md-6 col-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id})">-</button>
-                            </div>
-                            <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-${TaskValue.Id}">
-                            <div class="input-group-append">
-                                <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id})">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-6">
-                        <span class="product-price" onclick="Agregar('${Categoria}','${TaskValue.Id}')">
-                          <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-${TaskValue.Id}">
-                            <b>$ ${TaskValue.Valor} Und</b>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>`;
-              
 
-        
+      Task.on("child_added",function(data){  
+      var TaskValue=data.val();
+      var Valor= TaskValue.Valor;
+      
+      
+        document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-${Categoria}-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'${Categoria}')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-${Categoria}-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-${Categoria}-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'${Categoria}')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <span class="product-price" onclick="Agregar('${Categoria}','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-${Categoria}-${TaskValue.Id}">
+                          <b id="ValorV-${Categoria}-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
       });
     }
 
-  </script>
-  <script>
+  function BuscarProducto(){
+      
+      var Busqueda = $('#Buscar').val().toUpperCase();
+      document.getElementById("rowProductos").innerHTML='';
+    //Wiskys
+      var Task = firebase.database().ref("Productos/Wiskys/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Wiskys-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Wiskys')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Wiskys-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Wiskys-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Wiskys')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Wiskys','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Wiskys-${TaskValue.Id}">
+                          <b id="ValorV-Wiskys-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Tequilas
+      var Task = firebase.database().ref("Productos/Tequilas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Tequilas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Tequilas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Tequilas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Tequilas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Tequilas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Tequilas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Tequilas-${TaskValue.Id}">
+                          <b id="ValorV-Tequilas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Rones
+      var Task = firebase.database().ref("Productos/Rones/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Rones-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Rones')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Rones-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Rones-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Rones')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Rones','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Rones-${TaskValue.Id}">
+                          <b id="ValorV-Rones-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Vodkas
+    var Task = firebase.database().ref("Productos/Vodkas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Vodkas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Vodkas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Vodkas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Vodkas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Vodkas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Vodkas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Vodkas-${TaskValue.Id}">
+                          <b id="ValorV-Vodkas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Aguardientes
+    var Task = firebase.database().ref("Productos/Aguardientes/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Aguardientes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Aguardientes')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Aguardientes-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Aguardientes-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Aguardientes')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Aguardientes','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Aguardientes-${TaskValue.Id}">
+                          <b id="ValorV-Aguardientes-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Cremas
+    var Task = firebase.database().ref("Productos/Cremas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Cremas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Cremas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Cremas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Cremas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Cremas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Cremas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Cremas-${TaskValue.Id}">
+                          <b id="ValorV-Cremas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Reservas
+    var Task = firebase.database().ref("Productos/Reservas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Reservas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Reservas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Reservas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Reservas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Reservas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Reservas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Reservas-${TaskValue.Id}">
+                          <b id="ValorV-Reservas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Jovenes
+    var Task = firebase.database().ref("Productos/Jovenes/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Jovenes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Jovenes')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Jovenes-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Jovenes-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Jovenes')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Jovenes','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Jovenes-${TaskValue.Id}">
+                          <b id="ValorV-Jovenes-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Espumosos
+    var Task = firebase.database().ref("Productos/Espumosos/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Espumosos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Espumosos')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Espumosos-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Espumosos-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Espumosos')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Espumosos','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Espumosos-${TaskValue.Id}">
+                          <b id="ValorV-Espumosos-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Importadas
+    var Task = firebase.database().ref("Productos/Importadas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Importadas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Importadas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Importadas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Importadas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Importadas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Importadas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Importadas-${TaskValue.Id}">
+                          <b id="ValorV-Importadas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Nacionales
+    var Task = firebase.database().ref("Productos/Nacionales/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Nacionales-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Nacionales')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Nacionales-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Nacionales-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Nacionales')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Nacionales','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Nacionales-${TaskValue.Id}">
+                          <b id="ValorV-Nacionales-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Artesanales
+    var Task = firebase.database().ref("Productos/Artesanales/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Artesanales-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Artesanales')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Artesanales-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Artesanales-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Artesanales')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Artesanales','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Artesanales-${TaskValue.Id}">
+                          <b id="ValorV-Artesanales-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Aguas
+    var Task = firebase.database().ref("Productos/Aguas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Aguas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Aguas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Aguas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Aguas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Aguas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Aguas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Aguas-${TaskValue.Id}">
+                          <b id="ValorV-Aguas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Energizantes
+    var Task = firebase.database().ref("Productos/Energizantes/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Energizantes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Energizantes')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Energizantes-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Energizantes-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Energizantes')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Energizantes','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Energizantes-${TaskValue.Id}">
+                          <b id="ValorV-Energizantes-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Gaseosas
+    var Task = firebase.database().ref("Productos/Gaseosas/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Gaseosas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Gaseosas')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Gaseosas-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Gaseosas-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Gaseosas')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Gaseosas','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Gaseosas-${TaskValue.Id}">
+                          <b id="ValorV-Gaseosas-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Cigarrillos
+    var Task = firebase.database().ref("Productos/Cigarrillos/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Cigarrillos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Cigarrillos')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Cigarrillos-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Cigarrillos-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Cigarrillos')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Cigarrillos','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Cigarrillos-${TaskValue.Id}">
+                          <b id="ValorV-Cigarrillos-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Hielos
+    var Task = firebase.database().ref("Productos/Hielos/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Hielos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Hielos')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Hielos-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Hielos-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Hielos')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Hielos','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Hielos-${TaskValue.Id}">
+                          <b id="ValorV-Hielos-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Heets
+    var Task = firebase.database().ref("Productos/Heets/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Heets-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Heets')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Heets-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Heets-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Heets')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Heets','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Heets-${TaskValue.Id}">
+                          <b id="ValorV-Heets-${TaskValue.Id}"> ${Formato.format(Valor)}</b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+    //Blond
+    var Task = firebase.database().ref("Productos/Blond/");
+      Task.on("child_added",function(data){  
+        var TaskValue=data.val();
+        var Nombre = TaskValue.Nombre.toUpperCase();
+        if(Nombre.includes(Busqueda)){
+          var Valor= TaskValue.Valor;
+          document.getElementById("rowProductos").innerHTML+=`
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+            <div class="card">
+              <div class="card-head " style="text-align: center;">
+                <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="product-desc">
+                  <span class="product-title">
+                      <b>${TaskValue.Nombre}</b>     
+                  </span>
+                </div>
+                <div class="product-properties">
+                  <span class="product-color">
+                    <h4>${TaskValue.Descripcion}</h4>     
+                  </span>
+                  <div class="row">
+                    <div class="col-md-6 col-6">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Blond-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Blond')">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-lg" value="1" style="text-align: center" id="Cantidad-Blond-${TaskValue.Id}">
+                        <div class="input-group-append">
+                          <button class="btn  btn-lg btn-outline-secondary" type="button" id="Mas-Blond-${TaskValue.Id}" onclick="CambiarCantidad('Mas',${TaskValue.Id},'Blond')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <span class="product-price" onclick="Agregar('Blond','${TaskValue.Id}')">
+                        <input type="hidden" class="form-control form-control-lg" value="${TaskValue.Valor}" style="text-align: center" id="Valor-Blond-${TaskValue.Id}">
+                          <b id="ValorV-Blond-${TaskValue.Id}"> ${Formato.format(Valor)} </b>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        }
+      });
+  }
+
+ 
     function Agregar(Categoria,Id){
-     
-      
+      var Cantidad = $("#Cantidad-"+Categoria+'-'+Id).val();
 
+      Cantidad=(Cantidad*1);
+      var Valor = $("#Valor-"+Categoria+'-'+Id).val();
+      var database = firebase.database();
+      var Task = firebase.database().ref("Carrito/"+Carrito+"/");
+      H=0;
+      Task.on("child_added",function(data){
+        var TaskValue=data.val();
+        var key=data.key;
+        if((TaskValue.Producto==Id)&&(TaskValue.Categoria==Categoria)){
+          var Total = (TaskValue.Cantidad*1) + (Cantidad*1);
+          var postData = {
+            Categoria: Categoria,
+            Producto:Id,
+            Cantidad:Total,
+            Valor:Valor
+          };
+          H=1;
+          var updates = {};
+          updates['/Carrito/'+Carrito+'/' + key] = postData;  
+          firebase.database().ref().update(updates);
+        }
+      });
+      Task.once("value", function(snap) {
+        Task.off("child_added");
+        if(H==0){
+          var postData = {
+            Categoria: Categoria,
+            Producto:Id,
+            Cantidad:Cantidad,
+            Valor:Valor
+          };
+          var newPostKey = firebase.database().ref().child('Carrito/'+Carrito).push().key;
+          var updates = {};
+          updates['/Carrito/'+Carrito+'/' + newPostKey] = postData;  
+          firebase.database().ref().update(updates);
+        }
+        ActualizarCarrito();
+      });
+      $("#Cantidad-"+Categoria+'-'+Id).val("1");
+      var Valor = $('#Valor-'+Categoria+'-'+Id).val();
+      document.getElementById('ValorV-'+Categoria+'-'+Id).innerHTML=Formato.format(Valor);
       event.preventDefault();
-    var Cantidad = $("#Cantidad-"+Id).val();
-    var Valor = $("#Valor-"+Id).val();
-    
-    var database = firebase.database();
-    var postData = {
-      Categoria: Categoria,
-      Producto:Id,
-      Cantidad:Cantidad,
-      Valor:Valor
       
-    };
-    // Get a key for a new Post.
-    var newPostKey = firebase.database().ref().child('Carrito/'+Carrito).push().key;
-    // Write the new post's data simultaneously in the posts list and the user's post list.
-    var updates = {};
-    updates['/Carrito/'+Carrito+'/' + newPostKey] = postData;  
-  
-    
-     firebase.database().ref().update(updates);
-
-    ActualizarCarrito();
-      
-     
     }
 
     function ActualizarCarrito(){
       var Task = firebase.database().ref("Carrito/"+Carrito+"/");
       var H=0;
+      document.getElementById("TotalCarrito").innerHTML=Formato.format(H);
       Task.on("child_added",function(data){
-    
+       
         var TaskValue=data.val();
-
           var Valor=TaskValue.Valor;
           var Cantidad=TaskValue.Cantidad;
           var Total =Valor*Cantidad;
         H =H+Total;
-        
-      
-
-        document.getElementById("TotalCarrito").innerHTML="$ "+H;
+        document.getElementById("TotalCarrito").innerHTML=Formato.format(H);
         
       });
     }
 
 
 
-    function CambiarCantidad(Operacion,Id){
-      var Cantidad = $('#Cantidad-'+Id).val();
+    function CambiarCantidad(Operacion,Id,Categoria){
+      var Cantidad = $('#Cantidad-'+Categoria+'-'+Id).val();
+      var Valor = $('#Valor-'+Categoria+'-'+Id).val();
       Cantidad=Cantidad*1;
       if(Operacion=="Mas"){
         Cantidad=Cantidad+1;
@@ -292,23 +1267,38 @@
           Cantidad=Cantidad-1;
         }
       }
-      $('#Cantidad-'+Id).val(Cantidad);
+      $('#Cantidad-'+Categoria+'-'+Id).val(Cantidad);
+      Valor= Valor*Cantidad;
+      document.getElementById('ValorV-'+Categoria+'-'+Id).innerHTML=Formato.format(Valor);
 
     }
 function CambioVentana(Ventana){
   if(Ventana=='Inicio'){
     $("#Inicio").show(1000);
     $("#Productos").hide(1000);
+    $("#hero").show();
+    $("#separador").show();
+
+    
+    
   }else{
     $("#Inicio").hide(1000);
     $("#Productos").show(1000);
+    $("#hero").hide();
+    $("#separador").hide();
     TraerDatos(Ventana);
   }
+  cambioVentana(Ventana);
+}
 
-
+function VentanaIni(){
+  var Ventana = getCookie('Ventana');
+  if(Ventana !=''){
+    CambioVentana(Ventana);
+  }else{
+    CambioVentana('Inicio');
+  }
   
-
-
 }
 
 

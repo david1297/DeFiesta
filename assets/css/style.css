@@ -325,9 +325,11 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/Drugs.jpg");
+  background: url("../img/Fondo.png");
+  background-position: center;
   position: relative;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #hero .hero-container {
@@ -1802,6 +1804,31 @@ section {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.product-color h4 {
+  font-size: 11px;
+  padding: 0 21px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .product-title {
+    font-size: 0.7rem;
+  }
+  .product-color h4 {
+    font-size: 11px;
+    padding: 0 21px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+  }
+  .card-head {
+    
+    height: 150px;
+    
+  }
+}
+
 
 .product-title b {
   font-weight: 900;
@@ -1879,13 +1906,7 @@ section {
   clear: both;
 }
 
-.product-color h4 {
-  font-size: 11px;
-  padding: 0 21px;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-}
+
 
 .ul-color {
   margin-left: 27px;
@@ -1931,10 +1952,10 @@ section {
 .product-price {
   position: absolute;
   background: #11e95b;
-  padding: 7px 20px;
+  padding: 12px 10px;
   text-align: center;
   display: inline-block;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 200;
   color: #fff;
   border-radius: 7px;
@@ -1969,17 +1990,228 @@ section {
   padding: 10px 20px;
   color: #000;
 }
-.Carrito {
-  position: absolute;
-  background: #11e95b;
-  padding: 7px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 200;
-  color: #fff;
-  border-radius: 7px;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+:root {
+  --primary-color: #185ee0;
+  --secondary-color: #e6eef9;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+
+.containerShop {
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 15px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media (max-width: 500px) {
+  .containerShop {
+    position: fixed;
+    z-index: 999;
+    right: -30px;
+    bottom: 15px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+}
+
+.tabs {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  background-color: rgba(213,5,212,0.5);
+  box-shadow: 0px 0px 20px 5px rgba(213,5,212,0.5), 0px 0px 20px 5px rgba(213,5,212,0.5);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+.tabs * {
+  z-index: 2;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 99px;
   cursor: pointer;
- 
-  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+  color: #4f81c9 !important;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6), 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.notification {
+  background-color: #4f81c9 !important;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+          max-width: 9rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  border-radius: 99px;
+  background-color: var(--secondary-color);
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+input[type="radio"]:checked + label > .notification {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+input[id="radio-1"]:checked ~ .glider {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+input[id="radio-2"]:checked ~ .glider {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked ~ .glider {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+
+.glider {
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  /*background-color: var(--secondary-color);*/
+  z-index: 1;
+  border-radius: 99px;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+.containerLoader {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  filter: url('#goo');
+  animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot { 
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dot-3 {
+  background-color: #f74d75;
+  animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+  background-color: #10beae;
+  animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+  background-color: #ffe386;
+  animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-18px) scale(.45)}
+  60% {transform: translateY(-90px) scale(.45)}
+  80% {transform: translateY(-90px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-16px, 12px) scale(.45)}
+  60% {transform: translate(-80px, 60px) scale(.45)}
+  80% {transform: translate(-80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(80px, 60px) scale(.45)}
+  80% {transform: translate(80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes rotate-move {
+  55% {transform: translate(-50%, -50%) rotate(0deg)}
+  80% {transform: translate(-50%, -50%) rotate(360deg)}
+  100% {transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+@keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
+}
+#Loader{
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
