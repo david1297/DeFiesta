@@ -18,7 +18,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/9b6f739949.js" crossorigin="anonymous"></script>
 </head>
-<body onload="VentanaIni();ActualizarCarrito();">
+<body onload="VentanaIni();ActualizarCarrito(2);">
   <section id="hero">
     <div class="hero-container">
      <!-- <a href="index.html" class="hero-logo" ><img src="assets/img/hero-logo.png" alt=""></a>-->
@@ -49,7 +49,11 @@
     <section id="team" class="team"  style="background: #000; min-height: 50rem;">
       <div class="container">
         <nav class="navbar navbar-expand-lg Menu navbar-dark ">
-          <div class=" navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#main" onclick="CambioVentana('Inicio')">
@@ -149,6 +153,16 @@
           
           </div>
         </div>
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch containerCard" style="margin-bottom: 20px;">
+          <div class="card" id="CardCarrito" style="display: none;" onfocus="alert('dd');">     
+            <div class="card-body  card-bodyC">
+              <div class="product-properties" id="CardProductos">
+                
+              </div>
+              <button class="btn btn-P btn-block ">Realizar Pedido</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
         
@@ -157,12 +171,12 @@
       
     </section>
   </main>
-  <div class="containerShop" id="Carrito">
+  <div class="containerShop" id="Carrito" >
     <div class="tabs">
       <input type="radio" id="radio-1" name="tabs" checked />
       <label class="tab" for="radio-1" style="
       margin-bottom: 0px;
-  "><i class="fas fa-shopping-cart"></i><span class="notification" Id="TotalCarrito"></span></label>
+  "><i class="fas fa-shopping-cart"></i><span class="notification" Id="TotalCarrito" onclick="MostrarCarrito()"></span></label>
       
       
       <span class="glider"></span>
@@ -219,6 +233,19 @@
     var Carrito = getCookie('Carrito');
     const Modena = { style: 'currency', currency: 'USD' };
     const Formato = new Intl.NumberFormat('en-US', Modena);
+    var CarritoCard=false;
+    function MostrarCarrito(){
+      if(CarritoCard==false){
+        $('#CardCarrito').show(200);
+        CarritoCard= true;
+      }else{
+        $('#CardCarrito').hide(200);
+        CarritoCard=false;
+      }
+    }
+    
+// Ejecuta la funcion solo si el elemento esta visible
+
 
     function TraerDatos(Categoria){
       var Task = firebase.database().ref("Productos/"+Categoria+"/");
@@ -272,6 +299,7 @@
     }
 
   function BuscarProducto(){
+    CambioVentana('Buscar');
       
       var Busqueda = $('#Buscar').val().toUpperCase();
       document.getElementById("rowProductos").innerHTML='';
@@ -283,7 +311,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -299,7 +327,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Wiskys-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Wiskys')">-</button>
@@ -331,7 +359,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -347,7 +375,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Tequilas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Tequilas')">-</button>
@@ -379,7 +407,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -395,7 +423,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Rones-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Rones')">-</button>
@@ -427,7 +455,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -443,7 +471,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Vodkas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Vodkas')">-</button>
@@ -475,7 +503,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -491,7 +519,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Aguardientes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Aguardientes')">-</button>
@@ -523,7 +551,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -539,7 +567,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Cremas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Cremas')">-</button>
@@ -571,7 +599,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -587,7 +615,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Reservas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Reservas')">-</button>
@@ -619,7 +647,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -635,7 +663,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Jovenes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Jovenes')">-</button>
@@ -667,7 +695,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -683,7 +711,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Espumosos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Espumosos')">-</button>
@@ -715,7 +743,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -731,7 +759,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Importadas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Importadas')">-</button>
@@ -763,7 +791,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -779,7 +807,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Nacionales-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Nacionales')">-</button>
@@ -811,7 +839,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -827,7 +855,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Artesanales-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Artesanales')">-</button>
@@ -859,7 +887,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -875,7 +903,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Aguas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Aguas')">-</button>
@@ -907,7 +935,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -923,7 +951,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Energizantes-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Energizantes')">-</button>
@@ -955,7 +983,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -971,7 +999,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Gaseosas-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Gaseosas')">-</button>
@@ -1003,7 +1031,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -1019,7 +1047,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Cigarrillos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Cigarrillos')">-</button>
@@ -1051,7 +1079,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -1067,7 +1095,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Hielos-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Hielos')">-</button>
@@ -1099,7 +1127,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -1115,7 +1143,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Heets-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Heets')">-</button>
@@ -1147,7 +1175,7 @@
         if(Nombre.includes(Busqueda)){
           var Valor= TaskValue.Valor;
           document.getElementById("rowProductos").innerHTML+=`
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px;">
+          <div class="col-lg-4 col-md-6 col-6  d-flex align-items-stretch" style="margin-bottom: 20px;">
             <div class="card">
               <div class="card-head " style="text-align: center;">
                 <img src="${TaskValue.Foto}" alt="Producto" class="img-fluid">
@@ -1163,7 +1191,7 @@
                     <h4>${TaskValue.Descripcion}</h4>     
                   </span>
                   <div class="row">
-                    <div class="col-md-6 col-6">
+                    <div class="col-md-6 col-12">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <button class="btn btn-lg btn-outline-secondary" type="button" id="Menos-Blond-${TaskValue.Id}" onclick="CambiarCantidad('Menos',${TaskValue.Id},'Blond')">-</button>
@@ -1229,7 +1257,7 @@
           updates['/Carrito/'+Carrito+'/' + newPostKey] = postData;  
           firebase.database().ref().update(updates);
         }
-        ActualizarCarrito();
+        ActualizarCarrito(2);
       });
       $("#Cantidad-"+Categoria+'-'+Id).val("1");
       var Valor = $('#Valor-'+Categoria+'-'+Id).val();
@@ -1238,20 +1266,124 @@
       
     }
 
-    function ActualizarCarrito(){
+    function ActualizarCarrito(Tipo){
       var Task = firebase.database().ref("Carrito/"+Carrito+"/");
       var H=0;
+      if(Tipo==2){
+        document.getElementById("CardProductos").innerHTML='';
+        }
+      
       document.getElementById("TotalCarrito").innerHTML=Formato.format(H);
       Task.on("child_added",function(data){
-       
+  
         var TaskValue=data.val();
           var Valor=TaskValue.Valor;
           var Cantidad=TaskValue.Cantidad;
           var Total =Valor*Cantidad;
         H =H+Total;
+        if(Tipo==2){
+          CargarCarrito(TaskValue,data.key);
+        }
+        
+        
         document.getElementById("TotalCarrito").innerHTML=Formato.format(H);
         
       });
+    }
+    function CargarCarrito(TaskValue,key){
+    
+      var Url="Productos/"+TaskValue.Categoria+"/"+TaskValue.Producto+"";
+
+      var Id=TaskValue.Producto;
+      var Categoria=TaskValue.Categoria;
+      var Cantidad=TaskValue.Cantidad;
+   
+     
+      return firebase.database().ref(Url).once('value').then(function(snapshot) {
+        var Nombre =snapshot.val().Nombre;
+        var Foto =snapshot.val().Foto;
+        var Valor =snapshot.val().Valor;
+        var Descripcion =snapshot.val().Descripcion;
+        
+        document.getElementById("CardProductos").innerHTML+=`
+        <div class="row">
+                  <div class="col-md-2 col-6  ">
+                    <img src="${Foto}" alt="Producto"
+                    style="max-width: 80%; height: auto;" >
+                  </div>
+                  <div class="col-md-4 col-6">
+                    <div class="product-desc">
+                      <span class="product-title">
+                          <b>${Nombre}</b>     
+                      </span>
+                    </div>
+                    <span class="product-color">
+                    <h4 style="margin-top: 0px;margin-bottom: 0px;">${Descripcion}</h4>     
+                  </span>
+                  </div>
+
+                  <div class="col-md-3 col-6">
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <button class="btn btn-lg btn-outline-secondary" type="button"  onclick="CambiarCantidadC('Menos','${key}')">-</button>
+                      </div>
+                      <input type="text" class="form-control form-control-lg" value="${Cantidad}" style="text-align: center" id="Cantidad-${key}">
+                      <div class="input-group-append">
+                        <button class="btn  btn-lg btn-outline-secondary" type="button"  onclick="CambiarCantidadC('Mas','${key}')">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6">
+                    <span class="product-price">
+                      <input type="hidden" class="form-control form-control-lg" value="${Valor}" style="text-align: center" id="Valor-${key}">
+                        <b id="ValorV-${key}"> ${Formato.format(Valor*Cantidad)} </b>
+                    </span>
+                  </div>
+                </div>
+                <hr>`;
+        
+     
+      });
+      
+    }
+    function CambiarCantidadC(Operacion,Id){
+      var Cantidad = $('#Cantidad-'+Id).val();
+      var Valor = $('#Valor-'+Id).val();
+      Cantidad=Cantidad*1;
+      if(Operacion=="Mas"){
+        Cantidad=Cantidad+1;
+      }else{
+        if(Cantidad>1){
+          Cantidad=Cantidad-1;
+        }else{
+          Cantidad=0;
+        }
+      }
+
+      if(Cantidad==0){
+        var updates = {};
+          updates['/Carrito/'+Carrito+'/' + Id] = null;  
+          firebase.database().ref().update(updates);
+          ActualizarCarrito(2);
+      }else{
+        $('#Cantidad-'+Id).val(Cantidad);
+      Valor= Valor*Cantidad;
+      document.getElementById('ValorV-'+Id).innerHTML=Formato.format(Valor);
+     
+  
+        
+      
+         
+          var updates = {};
+          updates['/Carrito/'+Carrito+'/' + Id+'/Cantidad'] = Cantidad;  
+          firebase.database().ref().update(updates);
+          ActualizarCarrito(1);
+         
+      }
+      
+
+      
+
     }
 
 
@@ -1294,14 +1426,16 @@ function CambioVentana(Ventana){
 function VentanaIni(){
   var Ventana = getCookie('Ventana');
   if(Ventana !=''){
+
     CambioVentana(Ventana);
+    if(Ventana=='Buscar'){
+      BuscarProducto();
+    }
   }else{
     CambioVentana('Inicio');
   }
   
 }
-
-
   </script>
 </body>
 </html>

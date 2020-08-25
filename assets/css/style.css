@@ -1736,7 +1736,7 @@ section {
 
 .card {
   border-radius: 25px;
-  box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+  /*box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);*/
 }
 
 .card-head {
@@ -1753,6 +1753,20 @@ section {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
   border-radius: 25px 25px 0 0;
+}
+.card-circle {
+  
+  background: #fa782e;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fa782e 8%, #c82930 83%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius:  50%;
 }
 
 .card-logo {
@@ -1793,7 +1807,16 @@ section {
 .card-body {
   height: 255px;
   background: #fff;
-  border-radius: 0 0 25px 25px;
+  border-radius: 25px;
+  overflow: scroll;
+}
+
+.card-bodyC {
+  height: auto;
+  max-height: 40rem;
+  background: #fff;
+  border-radius: 25px;
+  overflow: scroll;
 }
 
 .product-title {
@@ -2003,7 +2026,29 @@ section {
 *:before {
   box-sizing: border-box;
 }
-
+.containerCard {
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 100px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.btn-P{
+  background-color: rgba(213,5,212,0.9);
+  border-color: rgba(213,5,212,0.5);
+  color: #fff;
+}
+.btn-P:hover{
+  
+  background-color: rgba(17,233,91,0.9);
+  border-color: rgba(17,233,91,0.7);
+  color: #fff;
+}
 
 .containerShop {
   position: fixed;
@@ -2023,6 +2068,18 @@ section {
     z-index: 999;
     right: -30px;
     bottom: 15px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  .containerCard {
+    position: fixed;
+    z-index: 999;
+    right: 0px;
+    bottom: 80px;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
