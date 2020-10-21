@@ -1,3 +1,12 @@
+$(document).ready(function() {
+  if(getCookie('Carrito')==''){
+      var Carrito=makeid(20);
+      var d = new Date();
+      d.setTime(d.getTime() + (10*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie =  "Carrito="+Carrito+";" + expires + ";path=/";
+  }
+});
 function getCookie(cname) {
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -10,7 +19,12 @@ function getCookie(cname) {
 	  if (c.indexOf(name) == 0) {
 		return c.substring(name.length, c.length);
 	  }
-	}
+  }
+  var Carrito=makeid(20);
+      var d = new Date();
+      d.setTime(d.getTime() + (10*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie =  "Carrito="+Carrito+";" + expires + ";path=/";
 	return "";
   }
 
@@ -31,17 +45,4 @@ function getCookie(cname) {
  }
  
  
- $(document).ready(function() {
-    if(getCookie('Carrito')==''){
-        var Carrito=makeid(20);
-        var d = new Date();
-        d.setTime(d.getTime() + (10*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
-        document.cookie =  "Carrito="+Carrito+";" + expires + ";path=/";
-    }
-    
-    
-
  
-
-});

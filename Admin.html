@@ -153,8 +153,7 @@
     const Formato = new Intl.NumberFormat('en-US', Modena);
 
     function CrearItem(){
-    $("#Loader").show(1000);
-
+    
 
       var file = document.getElementById('Foto').files[0];
       var Nombre = $('#Nombre').val();
@@ -162,7 +161,57 @@
       var Categoria = $('#Categoria').val();
       var Descripcion = $('#Descripcion').val();
       if(Nombre==''){
-        
+        alert("debe ingresar el nombre del producto");
+      }else{
+        if(Valor==""){
+          alert("debe ingresar el valor del producto");
+        }else{
+          if(Descripcion==""){
+            alert("debe ingresar la Descripcion del producto");
+          }else{
+            if (!$('#Foto').val()) { 
+              alert("debe ingresar la imagen del producto");
+            }else{
+              $("#Loader").show(1000);
+              var Id=Math.round(Math.random()*(1000-1)+parseInt(1));
+              var uploadTask = storageRef.child(Categoria+'/'+Id+'.jpg').put(file);
+              uploadTask.on('state_changed', function(snapshot){
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                switch (snapshot.state) {
+                  case firebase.storage.TaskState.PAUSED: // or 'paused'
+                    console.log('Upload is paused');
+                  break;
+                  case firebase.storage.TaskState.RUNNING: // or 'running'
+                    console.log('Upload is running');
+                  break;
+                }
+              }, function(error) {
+
+              }, function() {
+                uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                  var database = firebase.database();
+
+                  firebase.database().ref("Productos/"+Categoria+"/" + Id).set({
+                    Nombre: Nombre,
+                    Valor: Valor,
+                    Descripcion: Descripcion,
+                    Id: Id,
+                    Foto: downloadURL
+                  });
+
+
+                  
+
+                  console.log('File available at', downloadURL);
+                  $("#Loader").hide(1000);
+                  location.reload();
+                });
+              });
+
+            }
+          }
+        }
       }
 
 
@@ -176,42 +225,7 @@
 
 
 
-      var Id=Math.round(Math.random()*(1000-1)+parseInt(1));
-
-
-      var uploadTask = storageRef.child(Categoria+'/'+Id+'.jpg').put(file);
-      uploadTask.on('state_changed', function(snapshot){
-        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
-        switch (snapshot.state) {
-          case firebase.storage.TaskState.PAUSED: // or 'paused'
-            console.log('Upload is paused');
-          break;
-          case firebase.storage.TaskState.RUNNING: // or 'running'
-            console.log('Upload is running');
-          break;
-        }
-      }, function(error) {
-  
-      }, function() {
-        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-          var database = firebase.database();
-
-          firebase.database().ref("Productos/"+Categoria+"/" + Id).set({
-            Nombre: Nombre,
-            Valor: Valor,
-            Descripcion: Descripcion,
-            Id: Id,
-            Foto: downloadURL
-          });
-
-
-          
-
-          console.log('File available at', downloadURL);
-          $("#Loader").hide(1000);
-        });
-      });
+      
     }
 
   </script>
